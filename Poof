@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Rekenmachine</title>
+
+    </head>
+    <body>
+
+        <pre>
+        <h1>Javascript Rekenmachine</h1>
+                                Voer een getal in:        <input type="number" id="getal1">
+
+                                Voer een tweede getal in: <input type="number" id="getal2">
+
+                                Zelf berekende uitkomst:  <input type="number" id="getal3">
+
+            <h3 id="uitkomst"> *poof!* Hier komt de berekening :) </h3>
+            <h3 id="correctie"> </h3>
+            <!-- <h3 id="eigenuitkomst">Het door jouw berekende antwoord is goed</h3> -->
+        <hr>
+
+
+
+        </pre>
+
+        <button onclick="som()">Bereken som</button>
+        <button onclick="verschil()">Bereken verschil</button>
+        <button onclick="product()">Bereken product</button>
+        <button onclick="quotient()">Bereken quotÏent</button>
+
+    </body>
+
+</html>
+
+<script>
+        // Optellen
+        function som() {
+
+        var eerstegetal = document.getElementById("getal1").value;
+        var tweedegetal = document.getElementById("getal2").value;
+        var derdegetal = document.getElementById("getal3").value;
+
+        var uitkomst = document.getElementById("uitkomst");
+
+        var som = parseFloat(eerstegetal) + parseFloat(tweedegetal);
+
+        uitkomst.innerHTML = "De uitkomst van " + eerstegetal + " + " + tweedegetal + " = " + som;
+        uitkomst.style.color="black"
+
+        if (som == derdegetal){
+        correctie.innerHTML="Het door jouw berekende uitkomst is goed";
+        correctie.style.color="green"
+        }
+
+        else if (som != derdegetal){
+        correctie.innerHTML="Het door jouw berekende uitkomst is fout"
+        correctie.style.color="red"
+        }}
+
+        // Aftrekken
+        function verschil() {
+
+        var eerstegetal = document.getElementById("getal1").value;
+        var tweedegetal = document.getElementById("getal2").value;
+        var derdegetal = document.getElementById("getal3").value;
+
+        var uitkomst = document.getElementById("uitkomst");
+
+        var verschil = parseFloat(eerstegetal) - parseFloat(tweedegetal);
+        uitkomst.innerHTML = "De uitkomst van " + eerstegetal + " - " + tweedegetal + " = " + verschil;
+        uitkomst.style.color="black"
+
+        if (verschil == derdegetal){
+        correctie.innerHTML="Het door jouw berekende uitkomst is goed";
+        correctie.style.color="green"
+        }
+
+        else if (verschil != derdegetal){
+        correctie.innerHTML="Het door jouw berekende uitkomst is fout"
+        correctie.style.color="red"
+        }}
+
+        // Vermenigvuldigen
+        function product() {
+
+        var eerstegetal = document.getElementById("getal1").value;
+        var tweedegetal = document.getElementById("getal2").value;
+        var derdegetal = document.getElementById("getal3").value;
+
+        var uitkomst = document.getElementById("uitkomst");
+
+        var product = parseFloat(eerstegetal) * parseFloat(tweedegetal);
+        uitkomst.innerHTML = "De uitkomst van " + eerstegetal + " * " + tweedegetal + " = " + product;
+        uitkomst.style.color="black"
+
+        if (product == derdegetal){
+        correctie.innerHTML="Het door jouw berekende uitkomst is goed";
+        correctie.style.color="green"
+        }
+
+        else if (product != derdegetal){
+        correctie.innerHTML="Het door jouw berekende uitkomst is fout"
+        correctie.style.color="red"
+        }}
+
+        // Delen
+        function quotient() {
+
+        var eerstegetal = document.getElementById("getal1").value;
+        var tweedegetal = document.getElementById("getal2").value;
+        var derdegetal = document.getElementById("getal3").value;
+
+        var uitkomst = document.getElementById("uitkomst");
+
+        var quotient = parseFloat(eerstegetal) / parseFloat(tweedegetal);
+        uitkomst.innerHTML = "De uitkomst van " + eerstegetal + " ÷ " + tweedegetal + " = " + quotient;
+        uitkomst.style.color="black"
+
+        if (quotient == derdegetal){
+        correctie.innerHTML="Het door jouw berekende uitkomst is goed";
+        correctie.style.color="green"
+        }
+
+        else if (quotient != derdegetal){
+        correctie.innerHTML="Het door jouw berekende uitkomst is fout"
+        correctie.style.color="red"
+        }
+
+        if (eerstegetal == 0 && tweedegetal == 0){
+        uitkomst.style.color="red";
+        uitkomst.innerHTML="FOUTMELDING! U deelt door nul, dit is niet mogelijk!";
+        }}
+
+
+
+
+</script>
